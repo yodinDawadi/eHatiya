@@ -14,8 +14,8 @@ const SearchButton = styled(Button)({
 
 const Searchbar = () => {
   return (
-    <div className=' w-48 flex'>
-        <input className=' w-40 h-10 pl-3 rounded-l-2xl border border-gray-500' type="text" placeholder='Search' />
+    <div className=' w-9/12 flex'>
+        <input className=' w-full h-10 pl-3 rounded-l-2xl border border-gray-500' type="text" placeholder='Search' />
         <SearchButton className='rounded-r-full'  variant='contained'><SlMagnifier/></SearchButton>
     </div>
   )
