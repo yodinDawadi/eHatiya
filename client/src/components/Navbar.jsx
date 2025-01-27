@@ -3,6 +3,7 @@ import React from 'react'
 import {BrowserRouter, NavLink, Router, Routes} from 'react-router-dom'
 import Searchbar from './Searchbar'
 
+
 const Navbar = () => {
   return (
     <nav className='flex items-center justify-center h-20 px-2'>
@@ -11,6 +12,7 @@ const Navbar = () => {
         </div>
         <div className='w-1/3'>
             <Searchbar/>
+            
         </div>
         
         <div className='w-1/3 flex items-center justify-between gap-5' id='links'>

@@ -4,7 +4,6 @@ import { Button } from '@mui/material'
 
 const ProductCard = () => {
   return (
-
     <div className='w-1/4 h-1/2 flex flex-col rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)]'>
         <img className='rounded-t-lg' src={farsi} alt="sabji image" />
         <div className='w-full p-10 flex flex-col gap-2'>
