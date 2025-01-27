@@ -1,12 +1,12 @@
+import React from 'react'
 import { useState } from 'react'
-import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-     hello world
+     <p className='text-6xl text-green-700'>hello world</p>
     </>
   )
 }
