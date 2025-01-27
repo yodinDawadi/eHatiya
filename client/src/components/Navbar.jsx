@@ -5,7 +5,7 @@ import Searchbar from './Searchbar'
 
 const Navbar = () => {
   return (
-    <nav className='flex items-center justify-center h-20 px-2 border border-b-gray-300'>
+    <nav className='flex items-center justify-center h-20 px-2'>
         <div id='text' className='flex w-1/3'>
             <p className='w-full text-center text-4xl text-green-700'>eHatiya</p>
         </div>
