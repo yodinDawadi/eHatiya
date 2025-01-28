@@ -19,7 +19,7 @@ const Navbar = () => {
 
       <div className="w-1/3 flex items-center justify-between gap-5" id="links">
         <NavLink to={"/"}>Home</NavLink>
-        <NavLink className={'text-green-700 font-bold'} to={"/"}>Become a seller</NavLink>
+        <NavLink className={'text-green-700 font-bold'} to={"/seller-dashboard"}>Become a seller</NavLink>
         <NavLink to={"/"}>Help and support</NavLink>
         <NavLink to={"/"}>SignUp</NavLink>
         <NavLink to={"/"}>Login</NavLink>

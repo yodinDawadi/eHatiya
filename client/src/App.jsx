@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import Navbar from "./components/Navbar.jsx";
 import ProductDetail from "./screens/ProductDetail.jsx";
 import Cart from "./screens/Cart.jsx";
+import SellerDashboard from "./screens/SellerDashboard.jsx";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
           <Route path="/" element={<Products />} />
           <Route path="/details" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart/>}/>
+          <Route path="/seller-dashboard" element={<SellerDashboard/>}/>
+
         </Routes>
       </BrowserRouter>
     </>
