@@ -1,37 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const SellerDashboard = () => {
-  // State to store item details
-  const [itemName, setItemName] = useState('');
-  const [category, setCategory] = useState('');
-  const [price, setPrice] = useState('');
-  const [description, setDescription] = useState('');
+  const [itemName, setItemName] = useState("");
+  const [category, setCategory] = useState("");
+  const [price, setPrice] = useState("");
+  const [description, setDescription] = useState("");
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
 
-  // State to store added products
   const [products, setProducts] = useState([]);
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     if (itemName && category && price && description && image) {
-      const newProduct = { itemName, category, price, description, image };
+      const newProduct = { itemName, category, price, description, image: preview };
       setProducts([...products, newProduct]);
 
-      // Reset form fields
-      setItemName('');
-      setCategory('');
-      setPrice('');
-      setDescription('');
+      setItemName("");
+      setCategory("");
+      setPrice("");
+      setDescription("");
       setImage(null);
       setPreview(null);
     } else {
-      alert('Please fill in all fields');
+      alert("Please fill in all fields");
     }
   };
 
-  // Handle image preview
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -45,9 +40,9 @@ const SellerDashboard = () => {
   };
 
   return (
-    <div className="container mx-auto p-6 flex space-x-6">
+    <div className="container mx-auto p-6 flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6">
       {/* Left side: Form to input item details */}
-      <div className="w-1/2 space-y-6">
+      <div className="w-full md:w-1/2 space-y-6">
         <h1 className="text-3xl font-bold mb-6">Add New Product</h1>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -107,10 +102,9 @@ const SellerDashboard = () => {
               onChange={handleImageChange}
               className="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none"
             />
-            {/* Image preview */}
             {preview && (
               <div className="mt-4">
-                <img src={preview} alt="Preview" className="w-full h-auto rounded-md" />
+                <img src={preview} alt="Preview" className="w-48 h-auto rounded-md" />
               </div>
             )}
           </div>
@@ -125,10 +119,9 @@ const SellerDashboard = () => {
       </div>
 
       {/* Right side: Added products */}
-      <div className="w-1/2 space-y-6">
+      <div className="w-full md:w-1/2 space-y-6">
         <h1 className="text-3xl font-bold mb-6">Your Products</h1>
 
-        {/* List of added products */}
         <div className="space-y-4">
           {products.length === 0 ? (
             <p className="text-gray-700">You haven't added any products yet.</p>
@@ -143,7 +136,7 @@ const SellerDashboard = () => {
                   <img
                     src={product.image}
                     alt={product.itemName}
-                    className="w-full h-auto rounded-md mt-4"
+                    className="w-48 h-auto rounded-md inline-block mt-4"
                   />
                 )}
               </div>
